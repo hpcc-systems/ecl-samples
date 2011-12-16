@@ -1,0 +1,6 @@
+InitialLoad
+
+Runnable attributes used in the initial load of the text documents
+downloaded.  To run these on your cluser, you will need to change
+strings like the IP addresses and cluster names.  You may want to
+change the dataset names as well.

@@ -1,0 +1,19 @@
+The Patent-Analytics project is a demonstration of using the HPCC Systems
+HPCC platform to build an application to provide analysis of USPTO Patent
+filings.
+
+The data was obtaind by downloading the USPTO Patent Filings from the
+Google repository.  See:
+   http://www.google.com/googlebooks/uspto-patents-grants-text.html
+   http://www.google.com/googlebooks/uspto-patents-grants-biblio.html
+The bibliography files are small and redundant, but they provide another
+list so that I can check for completeness.
+
+
+Optional early patents (back to 1921), estimate to be about 30 GBytes,
+data is not compressed.  This is very dirty data, from a OCR of paper
+copies.
+http://www.google.com/googlebooks/uspto-patents-grants-ocr.html
+
+
+Currently using only the machine readable filings.
