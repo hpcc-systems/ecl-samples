@@ -3,7 +3,7 @@ import std, std.File, std.Str;
 dirAlias := std.File.FsFilenameRecord;
 
 
-STRING landing_zone := '10.239.20.76';
+STRING landing_zone := '127.0.0.1';		// Change to your Landing Zone IP
 STRING directory := '/var/lib/HPCCSystems/dropzone/patent_data/';
 STRING cluster := 'mythor';
 
