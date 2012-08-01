@@ -1,0 +1,20 @@
+The EDGAR Example project shows how to process SEC EDGAR filings in ECL.
+
+The files (one filing per file) should have been sprayed as a BLOB (see
+Programmers Guide for an example).  This can be done with a variable length
+record spray specifying NO SPLIT and a Prefix of filename,filesize
+
+
+The Raw_Input_Files module with give you a file of XBRL files or a file of
+Classic EDGAR filings
+
+The XBRL_Extract module provides a file of extracted revenue and net income
+data.  The extraction is extended to other interesting values by adding in
+additional path expressions
+
+The ClassicEDGAR_Extract defines how revenue and net income information is
+extracted from the text filing tables.  It can be extended by adding
+grammatical productions
+
+In both cases, there are definitions for the extraction of the filing type,
+the company name, and other interesting information about the filing.
