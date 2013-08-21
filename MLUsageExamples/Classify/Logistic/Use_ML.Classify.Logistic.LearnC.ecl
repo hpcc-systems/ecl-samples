@@ -42,5 +42,5 @@
    flds1 := flds0+f4;
    flds := ML.Discretize.ByRounding(flds1);
 
-   Model3 := ML.Classify.Logistic().LearnC(flds1(Number&lt;=2),flds(Number&gt;=3));
+   Model3 := ML.Classify.Logistic().LearnC(flds1(Number<=2),flds(Number>=3));
    OUTPUT(Model3,NAMED('Model3'));

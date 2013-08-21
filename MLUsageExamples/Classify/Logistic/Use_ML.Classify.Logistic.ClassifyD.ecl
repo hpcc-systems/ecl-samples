@@ -38,8 +38,8 @@
    flds1 := flds0+f4;
    flds := ML.Discretize.ByRounding(flds1);
 
-   Model3 := ML.Classify.Logistic().LearnD(flds(Number&lt;=2),flds(Number=3));
+   Model3 := ML.Classify.Logistic().LearnD(flds(Number<=2),flds(Number=3));
    OUTPUT(Model3,NAMED('Model3'));
 
-   predict:=ML.Classify.Logistic().ClassifyD(flds(Number&lt;=2),Model3);
+   predict:=ML.Classify.Logistic().ClassifyD(flds(Number<=2),Model3);
    OUTPUT(predict,NAMED('predict'));
