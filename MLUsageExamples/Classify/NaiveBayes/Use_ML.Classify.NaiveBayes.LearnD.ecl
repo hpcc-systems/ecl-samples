@@ -28,8 +28,8 @@
               ,TRANSFORM(ML.Types.NumericField
                          ,SELF.Number:=4
                          ,SELF.Value:=
-                              MAP(LEFT.Val &lt; 6 =&gt; 0
-                                 ,LEFT.VAL &lt; 10 =&gt; 1
+                              MAP(LEFT.Val < 6 => 0
+                                 ,LEFT.VAL < 10 => 1
                                  ,2
                               )
                          ,SELF := LEFT
@@ -41,5 +41,5 @@
    D2 := ML.Discretize.ByRounding(D1);
    OUTPUT(D2,NAMED('D2'));
 
-   Model := ML.Classify.NaiveBayes.LearnD(D2(Number&lt;=3),D2(Number=4));
+   Model := ML.Classify.NaiveBayes.LearnD(D2(Number<=3),D2(Number=4));
    OUTPUT(Model,NAMED('Model'));

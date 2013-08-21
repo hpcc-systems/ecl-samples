@@ -19,7 +19,7 @@
               ],{ UNSIGNED id,UNSIGNED a, UNSIGNED b, UNSIGNED c, UNSIGNED d });
    ML.ToField(d,o);
 
-   o1 := ML.Discretize.ByRounding(o)(id&lt;5);
+   o1 := ML.Discretize.ByRounding(o)(id<5);
 
-   Comparison:=ML.Classify.Perceptron(9).TestD(o1(Number&lt;=2),o1(number&gt;=3));
+   Comparison:=ML.Classify.Perceptron(9).TestD(o1(Number<=2),o1(number>=3));
    OUTPUT(comparison);

@@ -17,7 +17,7 @@
               ],{ UNSIGNED id,UNSIGNED a, UNSIGNED b, UNSIGNED c, UNSIGNED d });
    ML.ToField(d,o);
 
-   o1 := ML.Discretize.ByRounding(o)(id&lt;5);
+   o1 := ML.Discretize.ByRounding(o)(id<5);
 
-   Model:=ML.Classify.Perceptron(9).LearnD(o1(Number&lt;=2),o1(number&gt;=3));
+   Model:=ML.Classify.Perceptron(9).LearnD(o1(Number<=2),o1(number>=3));
    OUTPUT(Model,NAMED('Model'));

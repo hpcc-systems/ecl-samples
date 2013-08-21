@@ -39,6 +39,6 @@
    flds1 := flds0+f4;
    flds := ML.Discretize.ByRounding(flds1);
 
-   Model3 := ML.Classify.Logistic().LearnC(flds1(Number&lt;=2),flds(Number=3));
-   predict:=ML.Classify.Logistic().ClassifyC(flds1(Number&lt;=2),Model3);
+   Model3 := ML.Classify.Logistic().LearnC(flds1(Number<=2),flds(Number=3));
+   predict:=ML.Classify.Logistic().ClassifyC(flds1(Number<=2),Model3);
    OUTPUT(predict,NAMED('predict'));

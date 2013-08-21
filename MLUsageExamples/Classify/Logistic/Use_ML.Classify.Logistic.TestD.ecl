@@ -38,5 +38,5 @@
    flds1 := flds0+f4;
    flds := ML.Discretize.ByRounding(flds1);
 
-   comparison := ML.Classify.Logistic().TestD(flds(Number&lt;=2),flds(Number=3));
+   comparison := ML.Classify.Logistic().TestD(flds(Number<=2),flds(Number=3));
    OUTPUT(comparison);
