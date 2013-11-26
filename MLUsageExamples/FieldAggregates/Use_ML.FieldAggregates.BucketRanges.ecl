@@ -13,7 +13,7 @@ ML.ToField(IrisPlants,NumericField_IrisPlants);
 IrisPlantBucketRanges:=ML.FieldAggregates(NumericField_IrisPlants).BucketRanges(4);
 OUTPUT(IrisPlantBucketRanges(number!=1),NAMED('IrisPlantBucketRanges'));
      // number!=1 removes records of the 'class' field.
-<?dbfo-need height="2.7in" ?>
+
 /*
    Output of IrisPlantBucketRanges   
   number   bucket   min   max   cnt  
