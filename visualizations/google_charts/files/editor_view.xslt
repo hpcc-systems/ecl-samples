@@ -22,6 +22,7 @@
     <xsl:include href="json_chart_data.xslt"/>
     <xsl:include href="editor.xslt"/>
     <xsl:template match="/">
+		<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
         <xsl:apply-templates select="*/Results/Result"/>
     </xsl:template>
     <xsl:template match="Result">
