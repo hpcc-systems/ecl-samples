@@ -37,7 +37,7 @@
     <xsl:template match="Result">
         <html>
             <head>
-                <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+                
                 <title>ECL Workunit Web View using Google Visualization API.                 </title>
                 <script type="text/javascript" src="http://www.google.com/jsapi"> </script>
                 <script type="text/javascript"><xsl:text>
