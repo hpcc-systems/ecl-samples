@@ -31,13 +31,12 @@
     <xsl:include href="sparklinechart.xslt"/>
     <xsl:include href="scatterchart.xslt"/>
     <xsl:template match="/">
-		<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
+        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
         <xsl:apply-templates select="*/Results/Result"/>
     </xsl:template>
     <xsl:template match="Result">
         <html>
             <head>
-                
                 <title>ECL Workunit Web View using Google Visualization API.                 </title>
                 <script type="text/javascript" src="http://www.google.com/jsapi"> </script>
                 <script type="text/javascript"><xsl:text>
