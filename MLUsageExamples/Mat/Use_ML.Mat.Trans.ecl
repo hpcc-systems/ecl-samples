@@ -1,4 +1,3 @@
-/*
    The ML.Mat.Trans function does a standard matrix transposition
    of input_matrix.
 
@@ -15,7 +14,7 @@ d := DATASET([
               {3,2,6.0}
              ],Mat.Types.Element);
 OUTPUT(d,NAMED('d'));
-<?dbfo-need height="1.2in" ?>
+
 /*
   Dataset d's Content   
      x   y   value  
@@ -28,7 +27,7 @@ OUTPUT(d,NAMED('d'));
 */
 Trans_d:=Mat.Trans(d);
 OUTPUT(sort(Trans_d,x,y),NAMED('Trans_d'));
-<?dbfo-need height="1.1in" ?>
+
 /*
       Dataset Trans_d's Content       
              1   1   1.0  

@@ -1,4 +1,3 @@
-/*
    The ML.Mat.Sub function does a standard matrix subtraction
    of the two matrices, input_matrix1 and input_matrix2.
 
@@ -18,7 +17,7 @@
 
    SubAB := ML.Mat.Sub(A,B);
    OUTPUT(SubAB,NAMED('SubAB'));
-   <?dbfo-need height="1.7in" ?>
+   
    /*
     Contents of SubAB  
    x   y   value  

@@ -1,4 +1,3 @@
-/*
    The MinMedNext definition creates a dataset where each record
    contains statistics for the values of one of the 'number'
    fields of NumericFieldDS.
@@ -9,7 +8,7 @@
    Chicks := ML.Tests.Deprecated.ChickWeight;
    ML.ToField(Chicks,NumericField_Chicks);
    OUTPUT(ML.FieldAggregates(NumericField_Chicks).MinMedNext);
-   <?dbfo-need height="1.0in" ?>
+   
    /*
                                Output of ML.FieldAggregates.MinMedNext                            
   number   median   nextval   minval   maxval   sumval    countval   mean     var       sd     

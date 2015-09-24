@@ -1,4 +1,3 @@
-/*
    The ML.Mat.Each.Mul function multiplies each element of input_matrix1
    with the corresponding element of input_matrix2.
 
@@ -18,7 +17,7 @@
 
    MulAB := ML.Mat.Each.Mul(A,B);
    OUTPUT(MulAB,NAMED('MulAB'));
-   <?dbfo-need height="1.7in" ?>
+   
    /*
     Contents of MulAB  
    x   y   value  

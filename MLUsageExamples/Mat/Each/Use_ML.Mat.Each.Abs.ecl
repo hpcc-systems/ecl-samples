@@ -1,4 +1,3 @@
-/*
    The ML.Mat.Each.Abs function takes the absolute value of each
    element of input_matrix.
 
@@ -13,7 +12,7 @@
 
    AbsA := ML.Mat.Each.Abs(A);
    OUTPUT(AbsA,NAMED('AbsA'));
-   <?dbfo-need height="1.7in" ?>
+   
    /*
     Contents of AbsA  
    x   y   value  

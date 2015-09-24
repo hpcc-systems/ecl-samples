@@ -1,4 +1,3 @@
-/*
 No description found.
 */
 
@@ -35,7 +34,7 @@ No description found.
      //modelY's returned dataset is sorted because its order isn't guaranteed to be in
      // the same order as X's.
    OUTPUT(my_modelY,NAMED('my_modelY'));
-   <?dbfo-need height="2.1in" ?>
+   
    /*
            my_modelY's Content        
   id   number   value              

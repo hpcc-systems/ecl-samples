@@ -1,4 +1,3 @@
-/*
    The ML.Mat.Each.Reciprocal function calculates the reciprocal
    of each element of input_matrix, where the numerator
    (top number) of the reciprocal is scalar.
@@ -14,7 +13,7 @@
 
    ReciprocalA1 := ML.Mat.Each.Reciprocal(A,1);
    OUTPUT(ReciprocalA1,NAMED('ReciprocalA1'));
-   <?dbfo-need height="1.7in" ?>
+   
    /*
        Contents of ReciprocalA1      
          x   y   value  

@@ -1,4 +1,3 @@
-/*
    The ML.Mat.Each.Add function adds scalar to each element of
    input_matrix.
 
@@ -13,7 +12,7 @@
 
    AddA5 := ML.Mat.Each.Add(A,5);
    OUTPUT(AddA5,NAMED('AddA5'));
-   <?dbfo-need height="1.7in" ?>
+   
    /*
     Contents of AddA5  
    x   y   value  

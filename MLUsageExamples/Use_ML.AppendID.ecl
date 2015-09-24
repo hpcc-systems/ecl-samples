@@ -1,4 +1,3 @@
-/*
    The AppendID macro takes any structured dataset, and appends
    (actually prepends) a unique record identifier column
    to it.
@@ -11,7 +10,7 @@
    ML.AppendID(Chicks, recID, dOrigWithId); 
      // Because the dataset, Chicks, already has a record id field, dOrigWithId will
      // have two, i.e. rid and recID.
-   <?dbfo-need height="1.1in" ?>
+   
    /*
                Output of dOrigWithId             
   recid   rid   weight   time   chick   diet  

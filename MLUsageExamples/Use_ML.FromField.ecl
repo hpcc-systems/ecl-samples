@@ -1,4 +1,3 @@
-/*
    The ML.FromField macro is used to reconstitute an original
    matrix from a NumericField-formatted dataset. Basically,
    this means the output_layout contains names of numeric fields
@@ -20,7 +19,7 @@
      // that the desired output layout has its UID and numeric fields in the same order
      // as the <indexterm><primary>ToField</primary></indexterm> process's input dataset.
   OUTPUT(OrigDS,NAMED('OrigDS'));
-  <?dbfo-need height="1.4in" ?>
+  
   /*
              Output of OrigDS           
   rid   weight   time   chick   diet  
@@ -61,7 +60,7 @@
 
   ML.FromField(NumericFieldChicks,OutSpecialRec,CustomizedDS,OutSpecialMap);
   OUTPUT(CustomizedDS,NAMED('CustomizedDS'));
-  <?dbfo-need height="1.4in" ?>
+  
   /*
          Output of CustomizedDS        
   wgt   time   chicken   diet   rid  

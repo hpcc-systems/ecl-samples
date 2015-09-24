@@ -1,4 +1,3 @@
-/*
    The BucketRanges definition creates a dataset containing each
    buckets minimum and maximum value for each numeric field
    of NumericFieldDS.
@@ -13,7 +12,7 @@ ML.ToField(IrisPlants,NumericField_IrisPlants);
 IrisPlantBucketRanges:=ML.FieldAggregates(NumericField_IrisPlants).BucketRanges(4);
 OUTPUT(IrisPlantBucketRanges(number!=1),NAMED('IrisPlantBucketRanges'));
      // number!=1 removes records of the 'class' field.
-<?dbfo-need height="2.7in" ?>
+
 /*
    Output of IrisPlantBucketRanges   
   number   bucket   min   max   cnt  

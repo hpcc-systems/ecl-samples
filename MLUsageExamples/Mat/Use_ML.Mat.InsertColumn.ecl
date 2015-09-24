@@ -1,4 +1,3 @@
-/*
    The ML.Mat.InsertColumn function inserts column column_i into
    input_matrix and the new column is filled with fill_value.
 
@@ -13,7 +12,7 @@
 
    AddColumnA:=ML.Mat.InsertColumn(A,1,9);
    OUTPUT(AddColumnA);
-   <?dbfo-need height="2.1in" ?>
+   
    /*
       Contents of AddColumnA     
        x   y   value  

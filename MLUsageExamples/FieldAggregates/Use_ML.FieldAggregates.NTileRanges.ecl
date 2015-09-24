@@ -1,4 +1,3 @@
-/*
    The NTileRanges definition returns a dataset containing the
    value ranges for each ntile created.
 
@@ -14,7 +13,7 @@
    OUTPUT(NF_x20,NAMED('NF_x20'));
    OUTPUT(ML.FieldAggregates(NF_x20).NTiles(3));
    OUTPUT(ML.FieldAggregates(NF_x20).NTileRanges(3));
-   <?dbfo-need height="1.2in" ?>
+   
    /*
          NTileRanges Output          
   number   ntile   min   max    cnt  

@@ -1,4 +1,3 @@
-/*
 No description found.
 */
 
@@ -27,7 +26,7 @@ No description found.
    OUTPUT(flds,NAMED('flds'));
    P := ML.Regress_Poly_X(flds(number=1),flds(number=2),3);
    P.Beta;
-   <?dbfo-need height="1.0in" ?>
+   
    /*
          Beta Dataset             
   id   name    value                  
