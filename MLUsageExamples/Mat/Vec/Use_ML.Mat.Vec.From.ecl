@@ -1,4 +1,3 @@
-/*
    The Vec.From function creates a vector, i.e. a dataset of
    type Types.VecElement, given as input a) a vector length
    (vector_length) and b) (optionally) the default value (default_value)
@@ -13,7 +12,7 @@
  v1 := ML.Mat.Vec.From(10);
 
  OUTPUT(v1);
- <?dbfo-need height="1.8in" ?>
+ 
  /*
     v1's content   
   x    y   value  
@@ -34,7 +33,7 @@
  v2 := ML.Mat.Vec.From(10,5.0);
 
  OUTPUT(v2);
- <?dbfo-need height="1.8in" ?>
+ 
  /*
     v2's content   
   x    y   value  

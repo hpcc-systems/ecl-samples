@@ -1,4 +1,3 @@
-/*
    The Medians definition creates a dataset containing the median
    for each numeric field of of the input dataset, i.e.
    NumericFieldDS.
@@ -11,7 +10,7 @@ Chicks := ML.Tests.Deprecated.ChickWeight;
 ML.ToField(Chicks,NumericField_Chicks);
 MediansNumericField_Chicks := ML.FieldAggregates(NumericField_Chicks).Medians;
 OUTPUT(MediansNumericField_Chicks,NAMED('MediansNumericField_Chicks'));
-<?dbfo-need height="1.0in" ?>
+
 /*
          Output of MediansNumericField_Chicks           
                    number   median  

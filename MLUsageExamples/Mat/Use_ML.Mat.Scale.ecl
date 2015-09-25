@@ -1,4 +1,3 @@
-/*
    The ML.Mat.Scale function multiplies each element of input_matrix
    by scale_factor.
 
@@ -13,7 +12,7 @@
 
    ScaleA := ML.Mat.Scale(A,0.5);//Scale <emphasis>scale_factor</emphasis> is 0.5
    OUTPUT(ScaleA,NAMED('ScaleA'));
-   <?dbfo-need height="1.7in" ?>
+   
    /*
     Contents of ScaleA   
    x   y   value  

@@ -1,4 +1,3 @@
-/*
    The ML.Mat.Householder.Reflection function produces a dataset
    that is the Householder Reflection (also called a Householder
    matrix or Householder transformation) (named after
@@ -20,7 +19,7 @@
    OUTPUT(V,NAMED('V'));
 
    ML.Mat.Householder(V,3).Reflection();
-   <?dbfo-need height="1.2in" ?>
+   
    /*
          Householder Reflection of V       
              x   y   value  

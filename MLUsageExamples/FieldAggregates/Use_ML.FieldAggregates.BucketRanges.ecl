@@ -1,4 +1,3 @@
-/*
    The BucketRanges definition creates a dataset containing each
    buckets minimum and maximum value for each numeric field
    of NumericFieldDS.

@@ -1,4 +1,3 @@
-/*
    The ML.Mat.Each.Exp function returns the natural exponential
    value of each element of input_matrix.
 
@@ -13,7 +12,7 @@
 
    ExpA := ML.Mat.Each.Exp(A);
    OUTPUT(ExpA,NAMED('ExpA'));
-   <?dbfo-need height="1.7in" ?>
+   
    /*
     Contents of ExpA  
    x   y   value   

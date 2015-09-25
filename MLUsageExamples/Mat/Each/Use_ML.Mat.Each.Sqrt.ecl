@@ -1,4 +1,3 @@
-/*
    The ML.Mat.Each.Sqrt function takes the square root of each
    element of input_matrix.
 
@@ -13,7 +12,7 @@
 
    SqrtA := ML.Mat.Each.Sqrt(A);
    OUTPUT(SqrtA,NAMED('SqrtA'));
-   <?dbfo-need height="1.7in" ?>
+   
    /*
     Contents of SqrtA  
    x   y   value  
