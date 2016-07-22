@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ECL Watch + HPCC Visualization Framework</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <!--  Include the HPCC Visualization Framework sources  -->
+    <script src="http://viz.hpccsystems.com/v1.14.0-rc10/dist-amd/hpcc-viz.js"></script>
+</head>
+<body onresize="doResize();">
+
+    <!--  Placehold where our visualization will be rendered (it must be assigned a width + height, see index.css)  -->
+    <div id="placeholder">
+    </div>
+    
+    <script>
+        //  Global widget instance, used during page resize events
+        var vizWidget;
+
+        //  Asynchronously load the Communications + Column Chart modules from the framework
+        require(["src/other/Comms", "src/chart/Column"], function (Comms, Column) {
+
+            //  Create a new instance of the Column Chart
+            vizWidget = new Column()
+                .target("placeholder")                              //  Target DIV to render into
+                .columns(["County", "Males", "Females", "Total"])   //  Column names of the data
+                .render()                                           //  Render empty chart into the page
+            ;
+
+            //  Create a new ESP connection based on the hosting URL of the web page (the framework will parse the WUID or Roxie information as needed)
+            var connection = Comms.createESPConnection(window.location.pathname);
+
+            //  Request data from the workunit via the esp connection.  
+            //    Workunits typically have an empty request structure "{}".  
+            //    The response is returned asynchronously via the callback function.
+            connection.send({}, function (response) {
+
+                //  "Map" the "ie_population" data from a JSON object to an Array row by row - this is the "data shape" that the Column Chart expects.
+                var data = response.ie_population.map(function (row) {
+                    return [row.location, row.males, row.females, row.total];
+                });
+
+                //  Pass the mapped data into the visualization widget and render
+                vizWidget
+                    .data(data)
+                    .render()
+                ;
+            });
+        });    
+        
+        function doResize() {
+            //  When the page is resized, resize the widget and perform a "debounced" render.
+            if (vizWidget) {
+                vizWidget
+                    .resize()
+                    .lazyRender()
+                ;
+            }
+        };    
+    </script>
+</body>
+</html>

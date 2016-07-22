@@ -1,0 +1,10 @@
+﻿body {
+    margin: 0px;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+#placeholder {
+    width: 100%;
+    height: 100vh;
+}

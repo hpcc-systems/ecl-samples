@@ -1,0 +1,3 @@
+<Manifest>
+    <Resource filename="./res/*" recursive='1'/>
+</Manifest>
