@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ECL Watch + HPCC Visualization Framework</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <!--  Include the HPCC Visualization Framework sources  -->
+    <script src="http://cdn.rawgit.com/hpcc-systems/Visualization/v1.14.0-rc11/dist-amd/hpcc-viz.js"></script>
+</head>
+<body onresize="doResize();">
+
+    <!--  Placehold where our visualization will be rendered (it must be assigned a width + height, see index.css)  -->
+    <div id="placeholder">
+    </div>
+    
+    <script>
+        //  Global widget instance, used during page resize events
+        var vizWidget;
+
+        //  Asynchronously load the Communications + Column Chart modules from the framework
+        require(["src/other/Comms", "src/map/Layered", "src/map/TopoJSONChoropleth", "src/map/Graticule"], function (Comms, Layered, TopoJSONChoropleth, Graticule) {
+
+            //  Create a new instance of IE Topo JSON Choropleth
+            var ieLayer = new TopoJSONChoropleth()
+                .columns(["County", "Total"])  //  Column names of the data
+                .region("IE")
+                .opacity(0.75)
+                .meshStrokeWidth(0.75)
+            ;
+
+            //  Create a new instance of the Layered Map
+            vizWidget = new Layered()
+                .target("placeholder")
+                .layers([
+                    new TopoJSONChoropleth().region("ND").opacity(0.75).meshStrokeWidth(0.75),  //  Northern Ireland (no data)
+                    ieLayer,                                                                    //  See above
+                    new Graticule().opacity(0.25).meshStrokeWidth(0.75)                         //  Graticules (globe lines)
+                ])
+                .projection("orthographic") //  Globe
+                .centerLat(53.5)
+                .centerLong(-7.5)
+                .zoom(22)
+                .render()
+            ;
+
+            //  Create a new ESP connection based on the hosting URL of the web page (the framework will parse the WUID or Roxie information as needed)
+            var connection = Comms.createESPConnection(window.location.pathname);
+
+            //  Request data from the workunit via the esp connection.  
+            //    Workunits typically have an empty request structure "{}".  
+            //    The response is returned asynchronously via the callback function.
+            connection.send({}, function (response) {
+
+                //  "Map" the "ie_population" data from a JSON object to an Array row by row - this is the "data shape" that the Column Chart expects.
+                var data = response.ie_population.map(function (row) {
+                    return [row.location, row.total];
+                });
+
+                //  Pass the mapped data into the visualization widget and render
+                ieLayer.data(data);
+                vizWidget.render();
+            });
+        });
+
+        function doResize() {
+            //  When the page is resized, resize the widget and perform a "debounced" render.
+            if (vizWidget) {
+                vizWidget
+                    .resize()
+                    .lazyRender()
+                ;
+            }
+        };    
+    </script>
+</body>
+</html>
